@@ -2,6 +2,35 @@ img{
     height: 200px;
     width: 200px;
 }
-.h1{
+h1{
     
+    text-align: center;
+    text-shadow: 2px 2px red;
+    
+}
+
+
+body{
+    background-color:rgba(14, 241, 241, 0.281)
+    
+}
+
+#photos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.photoDivBox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 4px solid black;
+    padding:35px;
+    border-radius: 20px;
+    background-color:khaki;
+    color:lightblue;
 }

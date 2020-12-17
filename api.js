@@ -1,6 +1,6 @@
 const baseURL = "https://picsum.photos/v2/list";
 
-const section = document.querySelector("div");
+const section = document.querySelector("#photos");
 
 fetch(baseURL)
     .then(function (result) {
@@ -12,8 +12,9 @@ fetch(baseURL)
     });
 function displayResults(json) {
     for (let j = 0; j <= 25; j++) {
-        let firstBox = document.createElement('span');
-        let quote = json;
+        let firstBox = document.createElement('div');
+        firstBox.setAttribute("class", "photoDivBox");
+        
         let heading = document.createElement('h1');
         console.log(json[j].author)
         heading.textContent = json[j].author;
@@ -22,8 +23,8 @@ function displayResults(json) {
         img.src = json[j].download_url
         console.log(img)
 
-        section.appendChild(heading);
-        section.appendChild(img);
+        firstBox.appendChild(heading);
+        firstBox.appendChild(img);
 
         section.appendChild(firstBox);
     }
